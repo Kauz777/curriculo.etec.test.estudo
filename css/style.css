@@ -1,0 +1,226 @@
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+/* ===== BACKGROUND (VÍDEO) ===== */
+
+.background-video {
+    position: fixed;
+    inset: 0; /* ocupa toda a tela */
+
+    width: 100vw;
+    height: 100dvh;
+
+    z-index: -1; /* fica atrás de tudo */
+    overflow: hidden;
+
+    background: #000; /* fallback se vídeo não carregar */
+}
+
+
+/* ===== VÍDEO ===== */
+
+.video1 video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover; /* cobre toda a tela sem distorcer */
+}
+
+
+/* ===== TEXTO CENTRAL ===== */
+
+.texto1 {
+    flex-direction: column; /* coloca um embaixo do outro */
+    position: relative;
+    z-index: 1; /* fica acima do vídeo */
+
+    width: 100%;
+    height: 100dvh;
+
+    display: flex;
+    justify-content: center; /* centraliza horizontal */
+    align-items: center;     /* centraliza vertical */
+    text-align: center;
+}
+
+.texto1 h1 {
+    font-size: clamp(3rem, 10vw, 80px); /* responsivo */
+    color: #fff;
+    font-weight: bold;
+
+    /* animação inicial */
+    opacity: 0;
+    transform: translateY(80px);
+
+    animation: subirTexto 1.5s ease-out forwards;
+}
+
+.texto1 {
+    flex-direction: column; /* coloca um embaixo do outro */
+    position: relative;
+    z-index: 1; /* fica acima do vídeo */
+
+    width: 100%;
+    height: 100dvh;
+
+    display: flex;
+    justify-content: center; /* centraliza horizontal */
+    align-items: center;     /* centraliza vertical */
+    text-align: center;
+}
+
+.texto1 h1 {
+    font-size: clamp(3rem, 10vw, 80px); /* responsivo */
+    color: #fff;
+    font-weight: bold;
+
+    /* animação inicial */
+    opacity: 0;
+    transform: translateY(80px);
+
+    animation: subirTexto 1.5s ease-out forwards;
+}
+
+.texto1 img {
+    width: 150px; /* tamanho da imagem */
+    height: 150px;
+
+    margin-top: 20px; /* espaço abaixo do nome */
+
+    border-radius: 50%; /* deixa redonda */
+    object-fit: cover; /* não distorce */
+
+    border: 3px solid #fff; /* opcional (fica bonito) */
+}.texto1 {
+    flex-direction: column; /* coloca um embaixo do outro */
+    position: relative;
+    z-index: 1; /* fica acima do vídeo */
+
+    width: 100%;
+    height: 100dvh;
+
+    display: flex;
+    justify-content: center; /* centraliza horizontal */
+    align-items: center;     /* centraliza vertical */
+    text-align: center;
+}
+
+.texto1 h1 {
+    font-size: clamp(3rem, 10vw, 80px); /* responsivo */
+    color: #fff;
+    font-weight: bold;
+
+    /* animação inicial */
+    opacity: 0;
+    transform: translateY(80px);
+
+    animation: subirTexto 1.5s ease-out forwards;
+}
+
+.texto1 img {
+    width: 150px; /* tamanho da imagem */
+    height: 150px;
+
+    margin-top: 20px; /* espaço abaixo do nome */
+
+    border-radius: 50%; /* deixa redonda */
+    object-fit: cover; /* não distorce */
+
+    border: 3px solid #fff; /* opcional (fica bonito) */
+}.texto1 {
+    flex-direction: column; /* coloca um embaixo do outro */
+    position: relative;
+    z-index: 1; /* fica acima do vídeo */
+
+    width: 100%;
+    height: 100dvh;
+
+    display: flex;
+    justify-content: center; /* centraliza horizontal */
+    align-items: center;     /* centraliza vertical */
+    text-align: center;
+}
+
+.texto1 h1 {
+    font-size: clamp(3rem, 10vw, 80px); /* responsivo */
+    color: #fff;
+    font-weight: bold;
+
+    /* animação inicial */
+    opacity: 0;
+    transform: translateY(80px);
+
+    animation: subirTexto 1.5s ease-out forwards;
+}
+
+.texto1 img {
+    width: 150px; /* tamanho da imagem */
+    height: 150px;
+
+    margin-top: 350px; /* espaço abaixo do nome */
+
+    border-radius: 100%; /* deixa redonda */
+    object-fit: cover; /* não distorce */
+
+    animation: subirTexto 1.5s ease-out forwards; /*animação */
+    opacity: 0;                  
+    transform: translateY(80px); /* estado inicial da animação*/
+
+    border: 5px solid #fff; /* borda da imagem */
+}
+
+
+/* ===== ANIMAÇÃO ===== */
+
+@keyframes subirTexto {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Portifolio */
+
+.curriculo {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 330px; /* tabela a baixo do nome */
+    padding-bottom: 20px; /* espaço abaixo da tabela para não ficar grudada no final */
+}
+
+.curriculo table {
+    border-collapse: collapse;
+    opacity: 0;
+    transform: translateY(80px);
+    animation: subirTexto 1.5s ease-out forwards;
+    color: white;
+    font-size: 1.2rem; /* aumenta o tamanho da fonte */
+}
+
+.curriculo th, .curriculo td {
+    border: 1px solid white;
+    padding: 16px 28px; /* aumenta o padding para células maiores */
+    text-align: center;
